@@ -1,0 +1,177 @@
+<html>
+
+<head>
+    <title>Outlet Urban</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="CSS/estilo2.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <script type="text/javascript" src="JS/javaScript.js"></script>
+    <script src="https://kit.fontawesome.com/d881c2b784.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <!-- ------------------------------------------------ Topo ------------------------------------------------------>
+    <div class="container">
+        <div class="topo">
+
+            <div class="login">
+                <div class="logoTopo"> </div>
+
+                <div class="nome">
+                    <a href="index.html">
+                        <h3>Outlet Urban</h3>
+                    </a>
+                </div>
+                <div class="icones">
+                    <a href="login.html">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+
+
+
+
+                    <input type="checkbox" id="check">
+                    <label id="icone" for="check"><i class="fa-solid fa-cart-shopping"></i></label>
+
+                    <div class="barra">
+
+                        <h2> Carrinho de Compras </h2>
+                        <div id="itens"> </div>
+                        <div class="total">Total: <span id="total"></span> </div>
+
+                        <script>
+                            var total = 0;
+                            var i = 0;
+                            var valor = 0;
+
+                            for (i = 1; i <= 99; i++) {
+                                var prod = localStorage.getItem("produto" + i + "");
+                                if (prod != null) {
+
+                                    document.getElementById("itens").innerHTML += localStorage.getItem("qtd" + i) + " x ";
+                                    document.getElementById("itens").innerHTML += localStorage.getItem("produto" + i);
+                                    document.getElementById("itens").innerHTML += " ";
+                                    document.getElementById("itens").innerHTML += "R$: " + localStorage.getItem("valor" + i) + "<hr>";
+                                     valor = parseFloat(localStorage.getItem("valor" + i)); // valor 
+                                    total = (total + valor);
+                                }
+                            }
+
+                            document.getElementById("total").innerHTML = total.toFixed(2); 
+                        </script>
+
+                        <button type="button" style="background-color: red"
+                            onclick=" localStorage.clear(); location.reload();"> Limpar carrinho </button>
+                        <button type="button" style="background-color: green"> Finalizar compra </button>
+                    </div>
+                </div>
+
+                </a>
+            </div>
+        </div>
+  <!-- ------------------------------------------------ Menu ------------------------------------------------------>
+        <nav style="display: block; margin: 0 auto; text-align: center; margin-top: 8px">
+
+
+            <div class="menu-block">
+                <ul class="">
+                    <li><a href="index.html" class="itenMenu">Home</a></li>
+                    <li><a href="camisa.html" class="itenMenu">Camisas</a></li>
+                    <li><a href="bermuda.html" class="itenMenu">Bermuda</a></li>
+                    <li><a href="calca.html" class="itenMenu">Calça</a></li>
+                    <li><a href="jaqueta.html" class="itenMenu">Jaqueta</a></li>
+                    <li><a href="regata.html" class="itenMenu">Regata</a></li>
+                    <li><a href="sapatos.html" class="itenMenu">Sapatos</a></li>
+                    <li><a href="sunga.html" class="itenMenu">Sunga</a></li>
+                    <li><a href="moletom.html" class="itenMenu">Moletom</a></li>
+                    <li><a href="jeans.html" class="itenMenu">Jeans</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </div>
+    <!-- ------------------------------------------------ Conteudo ------------------------------------------------------>
+
+    <div>
+
+            <div id="tituloCentralAtendimentos">
+                <center><h1 class="h1CentralAtendimento">CENTRAL DE ATENDIMENTO</h1><br>
+                <h3 class="h3CentralAtendimento">Bem-vindo a nossa central de atendimento!</h3></center>
+            </div>
+
+            <div id="containerAtendimentos">
+
+                 <div class="centralAtendimentoBlocos">
+                    <img src="Imagens/whatsapp.png" width="30px" height="30px">
+
+                    <h2 class="h2CentralAtendimento">COMPRE PELO WHATSAPP</h2>
+
+                    <p class="paragrafoCentralAtendimento">Compre seus produtos favoritos. Mande mensagem para (37)99842-7239.</p>
+                </div>  
+                    
+                <div class="centralAtendimentoBlocos">
+                    <img src="Imagens/email.png" width="30px" height="30px">
+                    <h2 class="h2CentralAtendimento">DÚVIDAS VIA E-MAIL</h2>
+                    <p class="paragrafoCentralAtendimento">Envie sua dúvida pelo nosso e-mail <strong>outletUrban@gmail.com</strong></p>
+                </div>
+
+            </div>
+
+    </div> 
+
+        <!---------------------------------------------------Rodape------------------------------------------------------>
+
+        <div class="rodape">
+
+            <div class="LinksRodape">
+                <ul type="none">
+                    <li> <a href="quemsomos.html" class="rodapeLink"> Quem somos </a></li>
+                    <li> <a href="atendimento.html"  class="rodapeLink"> Atendimento </a></li>
+                    <li> <a href="troca.html"  class="rodapeLink"> Troque o Produto </a></li>
+                    <li> <a href="index.html"  class="rodapeLink"> Nossos Produtos </a></li>
+                    <li> <a href="pagamento.html"  class="rodapeLink"> Metodos De pagamento</a></li>
+                    <li> <a href="contato.html"  class="rodapeLink"> Contato </a></li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="imgRodape">
+                <p class="gray-dark">Executado por</p> <br>
+
+                <img src="Imagens/logo22.png" class="logoRodape">
+            </div>
+
+
+
+            <div class="Inforodape">
+
+                <p> Outlet Urban </p>
+                <p> Rua Amazonas, 298A, Formiga-MG </p>
+                <p> Telefone (37)99842-7239</p>
+                <p> outletUrban@gmail.com</p>
+
+                <a href="" target="_blank">
+                    <i class="fa-brands fa-facebook-square iconRodape"></i>
+                </a>
+                <a href="" target="_blank">
+                    <i class="fa-brands fa-instagram iconRodape"></i>
+                </a>
+                <a href="" target="_blank">
+                    <i class="fa-brands fa-whatsapp iconRodape"></i>
+                </a>
+                <a href="" target="_blank">
+                    <i class="fa-solid fa-envelope iconRodape"></i>
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

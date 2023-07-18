@@ -1,0 +1,228 @@
+<html>
+
+<head>
+    <title>Titulo</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../CSS/estilo.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <script type="text/javascript" src="../JS/javaScript.js"></script>
+    <script src="https://kit.fontawesome.com/d881c2b784.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <!-- ------------------------------------------------ Topo ------------------------------------------------------>
+    <div class="container">
+        <div class="topo">
+
+            <div class="login">
+                <div class="logoTopo">
+                </div>
+
+                <div class="nome">
+                    <a href="index (1).html">
+                        <h3>Outlet Urban</h3>
+                    </a>
+
+                </div>
+
+
+                <div class="icones">
+                    <a href="../login.html">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+           
+
+                    <input type="checkbox" id="check">
+                    <label id="icone" for="check"><i class="fa-solid fa-cart-shopping"></i></label>
+
+                    <div class="barra">
+
+                        <h2> Carrinho de Compras </h2>
+                        <div id="itens"> </div>
+                        <div class="total">Total: <span id="total"></span> </div>
+
+                        <script>
+                            var total = 0;
+                            var i = 0;
+                            var valor = 0;
+
+                            for (i = 1; i <= 99; i++) {
+                                var prod = localStorage.getItem("produto" + i + "");
+                                if (prod != null) {
+
+                                    document.getElementById("itens").innerHTML += localStorage.getItem("qtd" + i) + " x ";
+                                    document.getElementById("itens").innerHTML += localStorage.getItem("produto" + i);
+                                    document.getElementById("itens").innerHTML += " ";
+                                    document.getElementById("itens").innerHTML += "R$: " + localStorage.getItem("valor" + i) + "<hr>";
+                                     valor = parseFloat(localStorage.getItem("valor" + i)); // valor 
+                                    total = (total + valor);
+                                }
+                            }
+
+                            document.getElementById("total").innerHTML = total.toFixed(2); 
+                        </script>
+
+                        <button type="button" style="background-color: red"
+                            onclick=" localStorage.clear(); location.reload();"> Limpar carrinho </button>
+                        <button type="button" style="background-color: green"> Finalizar compra </button>
+                    </div>
+                </div>
+
+                </a>
+            </div>
+        </div>
+
+            <nav style="display: block; margin: 0 auto; text-align: center; margin-top: 8px">
+
+
+                <div class="menu-block">
+                    <ul class="">
+                        <li><a href="../index.html" class="itenMenu">Home</a></li>
+                        <li><a href="../camisa.html" class="itenMenu">Camisas</a></li>
+                        <li><a href="#" class="itenMenu">Bermuda</a></li>
+                        <li><a href="#" class="itenMenu">Calça</a></li>
+                        <li><a href="#" class="itenMenu">Jaqueta</a></li>
+                        <li><a href="#" class="itenMenu">Regata</a></li>
+                        <li><a href="#" class="itenMenu">Sapatos</a></li>
+                        <li><a href="#" class="itenMenu">Sunga</a></li>
+                        <li><a href="#" class="itenMenu">Moletom</a></li>
+                        <li><a href="#" class="itenMenu">Jeans</a></li>
+
+
+
+                    </ul>
+                </div>
+            </nav>
+
+
+        </div>
+        <!-- ------------------------------------------------ Bolas ------------------------------------------------------>
+        <div class="contProd">
+            <div class="imgProduto">
+
+                <img src="../Imagens/camisa1.webp" class="imagemProd"><br>
+                <h2 class="tituloSobre"> Sobre o Produto</h2>
+                <p class="infoSobre"> Blusa Xadrez Azul</p><br>
+                <p class="infoSobre">Camisa comfort, em algodão, manga curta. Leve e respirável por ser inteiramente confeccionada em algodão responsável, junto à sua estamparia xadrez. o produto é a união perfeita entre conforto e estilo.</p><br>
+                <p class="infoSobre"> Informaçoes Adicionais</p><br>
+                <p class="infoSobre"> Tamanho: P ao GG </p>
+                <p class="infoSobre"> Cor: Azul </p>
+                <p class="infoSobre"> Tecido: Algodão </p>
+                <p class="infoSobre"> Marca: Truss </p>
+                
+            </div>
+
+            <div class="textoProduto">
+                <div>
+                    <h4> Blusa Xadrez Azul </h4>
+                    <h5> Codigo 012010200 </h5>
+                    <h5> **********</h5>
+
+                    </figcaption>
+
+                    <div class="price">
+                        <div>
+                            <del>R$150,00</del>
+                            <ins>R$120,00</ins>
+                        </div>
+
+                        <span class="price-info">4x de R$ 30,00 </span>
+                        <h3> Escolha seu tamanho</h3>
+                        <div class="tamanho">
+                            <p> P</p>
+                        </div>
+                        <div class="tamanho">
+                            <p>M</p>
+                        </div>
+                        <div class="tamanho">
+                            <p>G</p>
+                        </div>
+                        <div class="tamanho">
+                            <p>GG</p>
+                        </div>
+                        <h3 class="tituloQuantidade">Quantidade</h3>
+                        <select name="select" class="quantidade">
+                                <option value="valor1" selected>1</option>
+                                <option value="valor2">2</option>
+                                <option value="valor3"> 3</option>
+                                <option value="valor3"> 4</option>
+                                <option value="valor3"> 5</option>
+                                <option value="valor3"> 6</option>
+                                <option value="valor3"> 7</option>
+                            </select><br>
+                        <input type="button" value="Comprar" class="botaoComprar"  onclick="AddCarrinho('Blusa-Xadrez-azul', 1, '120.00', 11)">
+                        <h3>Previsão de entrega</h3>
+                        <form>
+                            <input type="text" id="cep" placeholder="Informe seu cep">
+                            <input type="button" value="Buscar" onclick="frete();" class="btnBuscar">
+                        </form>
+
+                        <span id="cepRes1"></span><br>
+
+                        <span id="cepRes2"></span>
+
+
+
+                        </figure>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- ------------------------------------------------Rodape------------------------------------------------------>
+
+            <div class="rodape">
+
+                <div class="LinksRodape">
+                    <ul type="none">
+                        <li> <a href="../quemsomos.html"> Quem somos </a></li>
+                        <li> <a href="../atendimento.html"> Atendimento </a></li>
+                        <li> <a href="../troca.html"> Troque o Produto </a></li>
+                        <li> <a href="../nossosprodutos.html"> Nossos Produtos </a></li>
+                        <li> <a href="../pagamento.html"> Metodos De pagamento</a></li>
+                        <li> <a href="../contato.html"> Contato </a></li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="imgRodape">
+                    <p class="gray-dark">Executado por</p> <br>
+
+                    <img src="../Imagens/logo22.png" class="logoRodape">
+                </div>
+
+
+
+                <div class="Inforodape">
+
+                    <p> Outlet Urban </p>
+                    <p> Rua Amazonas, 298A, Formiga-Mg </p>
+                    <p> 3799842-7239</p>
+                    <p> outletUrban@gmail.com</p>
+
+                    <a href="" target="_blank">
+                        <i class="fa-brands fa-facebook-square iconRodape"></i>
+                    </a>
+                    <a href="" target="_blank">
+                        <i class="fa-brands fa-instagram iconRodape"></i>
+                    </a>
+                    <a href="" target="_blank">
+                        <i class="fa-brands fa-whatsapp iconRodape"></i>
+                    </a>
+                    <a href="" target="_blank">
+                        <i class="fa-solid fa-envelope iconRodape"></i>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,339 @@
+<html>
+
+<head>
+    <title>Titulo</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="CSS/estilo.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <script type="text/javascript" src="JS/javaScript.js"></script>
+    <script src="https://kit.fontawesome.com/d881c2b784.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <!-- ------------------------------------------------ Topo ------------------------------------------------------>
+    <div class="container">
+        <div class="topo">
+
+            <div class="login">
+                <div class="logoTopo">
+                </div>
+
+                <div class="nome">
+                    <a href="index (1).html">
+                        <h3>Outlet Urban</h3>
+                    </a>
+
+                </div>
+
+
+                <div class="icones">
+                    <a href="login.html">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </a>
+               
+                    <input type="checkbox" id="check">
+                    <label id="icone" for="check"><i class="fa-solid fa-cart-shopping"></i></label>
+
+                    <div class="barra">
+
+                        <h2> Carrinho de Compras </h2>
+                        <div id="itens"> </div>
+                        <div class="total">Total: <span id="total"></span> </div>
+
+                        <script>
+                            var total = 0;
+                            var i = 0;
+                            var valor = 0;
+
+                            for (i = 1; i <= 99; i++) {
+                                var prod = localStorage.getItem("produto" + i + "");
+                                if (prod != null) {
+
+                                    document.getElementById("itens").innerHTML += localStorage.getItem("qtd" + i) + " x ";
+                                    document.getElementById("itens").innerHTML += localStorage.getItem("produto" + i);
+                                    document.getElementById("itens").innerHTML += " ";
+                                    document.getElementById("itens").innerHTML += "R$: " + localStorage.getItem("valor" + i) + "<hr>";
+                                     valor = parseFloat(localStorage.getItem("valor" + i)); // valor 
+                                    total = (total + valor);
+                                }
+                            }
+
+                            document.getElementById("total").innerHTML = total.toFixed(2); 
+                        </script>
+
+                        <button type="button" style="background-color: red"
+                            onclick=" localStorage.clear(); location.reload();"> Limpar carrinho </button>
+                        <button type="button" style="background-color: green"> Finalizar compra </button>
+                    </div>
+                </div>
+
+                </a>
+            </div>
+        </div>
+
+            <nav style="display: block; margin: 0 auto; text-align: center; margin-top: 8px">
+
+
+                <div class="menu-block">
+                    <ul class="">
+                        <li><a href="index.html" class="itenMenu">Home</a></li>
+                        <li><a href="camisa.html" class="itenMenu">Camisas</a></li>
+                        <li><a href="#" class="itenMenu">Bermuda</a></li>
+                        <li><a href="#" class="itenMenu">Calça</a></li>
+                        <li><a href="#" class="itenMenu">Jaqueta</a></li>
+                        <li><a href="#" class="itenMenu">Regata</a></li>
+                        <li><a href="#" class="itenMenu">Sapatos</a></li>
+                        <li><a href="#" class="itenMenu">Sunga</a></li>
+                        <li><a href="#" class="itenMenu">Moletom</a></li>
+                        <li><a href="#" class="itenMenu">Jeans</a></li>
+
+
+
+                    </ul>
+                </div>
+            </nav>
+
+
+        </div>
+        <!-- ------------------------------------------------ Bolas ------------------------------------------------------>
+        <div  class="pageProdutos"><br> <br><br>
+            <h1 style="text-align: center;"> Camisas</h1>
+            <div class="linha">
+                <div class="col1">
+                    <div class="product-item" style="text-align: center">
+                        <a href="Produtos/camisa1.html" target="_blank" class="product-link">
+                            <figure class="product-info">
+                                <div class="product-info-img">
+                                    <img src="Imagens/camisa1.webp" alt="description image">
+                                </div>
+                                <figcaption class="product-info-description">
+                                    <h2 class="title">Camisa Xadres Azul</h2>
+    
+    
+                                </figcaption>
+                                <div class="price-box">
+                                    <div class="price">
+                                        <div>
+                                            <del>R$150,00</del>
+                                            <ins>R$120,00</ins>
+                                        </div>
+                                        <span class="price-info">4x de R$ 30,00 </span>
+                                    </div>
+                                </div>
+                            </figure>
+                        </a>
+                        <div>
+                            <input  class="botaoMaisVendidos" type=button value="Adicionar ao carrinho"
+                               onclick="AddCarrinho('Blusa-Xadrez-azul', 1, '120.00', 111)">
+                        </div>
+                    </div>
+                </div>
+               <div class="col2">
+                    <div class="product-item" style="text-align: center">
+                        <a href="Produtos/camisa3.html" target="_blank" class="product-link">
+                            <figure class="product-info">
+                                <div class="product-info-img">
+                                    <img src="Imagens/camisa3.webp" alt="description image">
+                                </div>
+                                <figcaption class="product-info-description">
+                                    <h2 class="title">CAMISA FOLHAGENS PRETO</h2>
+    
+    
+                                </figcaption>
+                                <div class="price-box">
+                                    <div class="price">
+                                        <div>
+                                            <del>R$100,00</del>
+                                            <ins>R$80,00</ins>
+                                        </div>
+                                        <span class="price-info">4x de R$ 20,00 </span>
+                                    </div>
+                                </div>
+                            </figure>
+                        </a>
+                        <div>
+                            <input  class="botaoMaisVendidos" type=button value="Adicionar ao carrinho"
+                               onclick="AddCarrinho('Blusa-folhagens-preto', 1, '80.00', 222)">
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="linha">
+                <div class="col1">
+                    <div class="product-item" style="text-align: center">
+                        <a href="Produtos/camisa2.html" target="_blank" class="product-link">
+                            <figure class="product-info">
+                                <div class="product-info-img">
+                                    <img src="Imagens/camisa2.webp" alt="description image">
+                                </div>
+                                <figcaption class="product-info-description">
+                                    <h2 class="title">Camisa Basica Cinza</h2>
+    
+    
+                                </figcaption>
+                                <div class="price-box">
+                                    <div class="price">
+                                        <div>
+                                            <del>R$120,00</del>
+                                            <ins>R$100,00</ins>
+                                        </div>
+                                        <span class="price-info">4x de R$ 25,00 </span>
+                                    </div>
+                                </div>
+                            </figure>
+                        </a>
+                        <div>
+                            <input  class="botaoMaisVendidos" type=button value="Adicionar ao carrinho"
+                               onclick="AddCarrinho('Camisa-basica-cinza', 1, '100.00', 123)">
+                        </div>
+                    </div>
+                </div>
+               <div class="col2">
+                    <div class="product-item" style="text-align: center">
+                        <a href="Produtos/camisa2.html" target="_blank" class="product-link">
+                            <figure class="product-info">
+                                <div class="product-info-img">
+                                    <img src="Imagens/camisa4.webp" alt="description image">
+                                </div>
+                                <figcaption class="product-info-description">
+                                    <h2 class="title">Camisa Manga longa</h2>
+    
+    
+                                </figcaption>
+                                <div class="price-box">
+                                    <div class="price">
+                                        <div>
+                                            <del>R$80,00</del>
+                                            <ins>R$40,00</ins>
+                                        </div>
+                                        <span class="price-info">4x de R$ 10,00 </span>
+                                    </div>
+                                </div>
+                            </figure>
+                        </a>
+                        <div>
+                            <input  class="botaoMaisVendidos" type=button value="Adicionar ao carrinho"
+                               onclick="AddCarrinho('Blusa-manga-longa', 1, '80.00', 222)">
+                        </div>
+                    </div>
+                </div>
+              
+ <div class="linha">
+                <div class="col1">
+                    <div class="product-item" style="text-align: center">
+                        <a href="Produtos/camisa1.html" target="_blank" class="product-link">
+                            <figure class="product-info">
+                                <div class="product-info-img">
+                                    <img src="Imagens/camisa5.webp" alt="description image">
+                                </div>
+                                <figcaption class="product-info-description">
+                                    <h2 class="title">Camisa Estampa Lobo </h2>
+    
+    
+                                </figcaption>
+                                <div class="price-box">
+                                    <div class="price">
+                                        <div>
+                                            <del>R$150,00</del>
+                                            <ins>R$120,00</ins>
+                                        </div>
+                                        <span class="price-info">4x de R$ 30,00 </span>
+                                    </div>
+                                </div>
+                            </figure>
+                        </a>
+                        <div>
+                            <input  class="botaoMaisVendidos" type=button value="Adicionar ao carrinho"
+                               onclick="AddCarrinho('Blusa-Xadrez-azul', 1, '120.00', 111)">
+                        </div>
+                    </div>
+                </div>
+               <div class="col2">
+                    <div class="product-item" style="text-align: center">
+                        <a href="Produtos/camisa6.html" target="_blank" class="product-link">
+                            <figure class="product-info">
+                                <div class="product-info-img">
+                                    <img src="Imagens/camisa3.webp" alt="description image">
+                                </div>
+                                <figcaption class="product-info-description">
+                                    <h2 class="title">Camisa listra preta</h2>
+    
+    
+                                </figcaption>
+                                <div class="price-box">
+                                    <div class="price">
+                                        <div>
+                                            <del>R$100,00</del>
+                                            <ins>R$80,00</ins>
+                                        </div>
+                                        <span class="price-info">4x de R$ 20,00 </span>
+                                    </div>
+                                </div>
+                            </figure>
+                        </a>
+                        <div>
+                            <input  class="botaoMaisVendidos" type=button value="Adicionar ao carrinho"
+                               onclick="AddCarrinho('Blusa-folhagens-preto', 1, '80.00', 222)">
+                        </div>
+                    </div>
+                </div>
+
+
+            <!-- ------------------------------------------------Rodape------------------------------------------------------>
+
+            <div class="rodape">
+
+                <div class="LinksRodape">
+                    <ul type="none">
+                        <li> <a href="quemsomos.html"> Quem somos </a></li>
+                        <li> <a href="atendimento.html"> Atendimento </a></li>
+                        <li> <a href="troca.html"> Troque o Produto </a></li>
+                        <li> <a href="nossosprodutos.html"> Nossos Produtos </a></li>
+                        <li> <a href="pagamento.html"> Metodos De pagamento</a></li>
+                        <li> <a href="contato.html"> Contato </a></li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="imgRodape">
+                    <p class="gray-dark">Executado por</p> <br>
+
+                    <img src="Imagens/logo22.png" class="logoRodape">
+                </div>
+
+
+
+                <div class="Inforodape">
+
+                    <p> Outlet Urban </p>
+                    <p> Rua Amazonas, 298A, Formiga-Mg </p>
+                    <p> 3799842-7239</p>
+                    <p> outletUrban@gmail.com</p>
+
+                    <a href="" target="_blank">
+                        <i class="fa-brands fa-facebook-square iconRodape"></i>
+                    </a>
+                    <a href="" target="_blank">
+                        <i class="fa-brands fa-instagram iconRodape"></i>
+                    </a>
+                    <a href="" target="_blank">
+                        <i class="fa-brands fa-whatsapp iconRodape"></i>
+                    </a>
+                    <a href="" target="_blank">
+                        <i class="fa-solid fa-envelope iconRodape"></i>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+</body>
+
+</html>

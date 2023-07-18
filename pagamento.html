@@ -1,0 +1,189 @@
+<html>
+
+<head>
+    <title>Outlet Urban</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="CSS/estilo2.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <script type="text/javascript" src="JS/javaScript.js"></script>
+    <script src="https://kit.fontawesome.com/d881c2b784.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <!-- ------------------------------------------------ Topo ------------------------------------------------------>
+    <div class="container">
+        <div class="topo">
+
+            <div class="login">
+                <div class="logoTopo"> </div>
+
+                <div class="nome">
+                    <a href="index.html">
+                        <h3>Outlet Urban</h3>
+                    </a>
+                </div>
+                <div class="icones">
+                    <a href="login.html">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+
+
+
+
+                    <input type="checkbox" id="check">
+                    <label id="icone" for="check"><i class="fa-solid fa-cart-shopping"></i></label>
+
+                    <div class="barra">
+
+                        <h2> Carrinho de Compras </h2>
+                        <div id="itens"> </div>
+                        <div class="total">Total: <span id="total"></span> </div>
+
+                        <script>
+                            var total = 0;
+                            var i = 0;
+                            var valor = 0;
+
+                            for (i = 1; i <= 99; i++) {
+                                var prod = localStorage.getItem("produto" + i + "");
+                                if (prod != null) {
+
+                                    document.getElementById("itens").innerHTML += localStorage.getItem("qtd" + i) + " x ";
+                                    document.getElementById("itens").innerHTML += localStorage.getItem("produto" + i);
+                                    document.getElementById("itens").innerHTML += " ";
+                                    document.getElementById("itens").innerHTML += "R$: " + localStorage.getItem("valor" + i) + "<hr>";
+                                     valor = parseFloat(localStorage.getItem("valor" + i)); // valor 
+                                    total = (total + valor);
+                                }
+                            }
+
+                            document.getElementById("total").innerHTML = total.toFixed(2); 
+                        </script>
+
+                        <button type="button" style="background-color: red"
+                            onclick=" localStorage.clear(); location.reload();"> Limpar carrinho </button>
+                        <button type="button" style="background-color: green"> Finalizar compra </button>
+                    </div>
+                </div>
+
+                </a>
+            </div>
+        </div>
+  <!-- ------------------------------------------------ Menu ------------------------------------------------------>
+        <nav style="display: block; margin: 0 auto; text-align: center; margin-top: 8px">
+
+
+            <div class="menu-block">
+                <ul class="">
+                    <li><a href="index.html" class="itenMenu">Home</a></li>
+                    <li><a href="camisa.html" class="itenMenu">Camisas</a></li>
+                    <li><a href="bermuda.html" class="itenMenu">Bermuda</a></li>
+                    <li><a href="calca.html" class="itenMenu">Calça</a></li>
+                    <li><a href="jaqueta.html" class="itenMenu">Jaqueta</a></li>
+                    <li><a href="regata.html" class="itenMenu">Regata</a></li>
+                    <li><a href="sapatos.html" class="itenMenu">Sapatos</a></li>
+                    <li><a href="sunga.html" class="itenMenu">Sunga</a></li>
+                    <li><a href="moletom.html" class="itenMenu">Moletom</a></li>
+                    <li><a href="jeans.html" class="itenMenu">Jeans</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </div>
+    <!-- ------------------------------------------------ Conteudo ------------------------------------------------------>
+
+    <div class="containerPagamentos">       
+                    <center><h1 class="h1FormaDePagamento"><img src="Imagens/pagamento.png" width="50px" height="50px"> Formas de Pagamento</h1></center><br>
+
+                    <div class="cartaoCredito"> 
+
+                            <h1 class="h1FormaDePagamento">Cartão de crédito (Parcele suas compras em até 10 vezes sem juros)</h1><br>
+                            <p class="pFormaDePagamento">Com o cartão em mãos basta seguir as instruções:<br>
+                            Digite o número do cartão.<br>  
+                            Escreva o nome impresso no cartão.<br>
+                            Declare o vencimento do cartão(mês/ano).<br>
+                            Escreva o código de segurança (número de 3 a 4 dígitos no verso do cartão).<br>
+                            Agora basta decidir em quantas vezes quer pagar a compra!</p>
+
+                    </div>          
+
+                    <div class="cartaoCredito">
+
+                        <h1 class="h1FormaDePagamento">Boleto Bancário</h1><br>
+
+                            <p class="pFormaDePagamento">Após clicar em <strong>“Finalizar Compra”</strong> seu boleto será gerado.
+                            O prazo para pagamento do boleto é de 1 (um) dia - não serão aceitos pagamentos após o vencimento.<br>
+                            Informamos que o pedido somente será liberado mediante o pagamento em uma única parcela, referente ao valor integral do título. Somente será aceito pagamento em dinheiro ou débito em conta.<br>
+                            Boletos não pagos dentro do prazo e/ou com valor diferente do título (para maior ou menor) acarretarão no cancelamento automático do pedido.</p>
+
+                    </div>      
+
+                    <div class="cartaoCredito">
+
+                        <h1 class="h1FormaDePagamento">PIX</h1><br>
+
+                            <p class="pFormaDePagamento">Clique em <strong>Finalizar Pedido</strong> para gerar o <strong>código QR</strong> de pagamento.<br>
+                            Depois, é só fazer um PIX no aplicativo de sua preferência.<br>
+                            Prontinho! Agora só aguardar seu pedido chegar.</p>
+
+                    </div>  
+
+            </div>
+    
+
+        <!-- ------------------------------------------------Rodape------------------------------------------------------>
+
+        <div class="rodape">
+
+            <div class="LinksRodape">
+                <ul type="none">
+                    <li> <a href="quemsomos.html" class="rodapeLink"> Quem somos </a></li>
+                    <li> <a href="atendimento.html"  class="rodapeLink"> Atendimento </a></li>
+                    <li> <a href="troca.html"  class="rodapeLink"> Troque o Produto </a></li>
+                    <li> <a href="index.html"  class="rodapeLink"> Nossos Produtos </a></li>
+                    <li> <a href="pagamento.html"  class="rodapeLink"> Metodos De pagamento</a></li>
+                    <li> <a href="contato.html"  class="rodapeLink"> Contato </a></li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="imgRodape">
+                <p class="gray-dark">Executado por</p> <br>
+
+                <img src="Imagens/logo22.png" class="logoRodape">
+            </div>
+
+
+
+            <div class="Inforodape">
+
+                <p> Outlet Urban </p>
+                <p> Rua Amazonas, 298A, Formiga-MG </p>
+                <p> Telefone (37)99842-7239</p>
+                <p> outletUrban@gmail.com</p>
+
+                <a href="" target="_blank">
+                    <i class="fa-brands fa-facebook-square iconRodape"></i>
+                </a>
+                <a href="" target="_blank">
+                    <i class="fa-brands fa-instagram iconRodape"></i>
+                </a>
+                <a href="" target="_blank">
+                    <i class="fa-brands fa-whatsapp iconRodape"></i>
+                </a>
+                <a href="" target="_blank">
+                    <i class="fa-solid fa-envelope iconRodape"></i>
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
