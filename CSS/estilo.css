@@ -1,0 +1,669 @@
+/* ---------------------------- Menu ------------------------------*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.login {
+    height: 100px;
+    background-color: #3FA3DD;
+}
+
+.menu {
+    background-color: #D49D6F;
+    height: 50px;
+    text-align: center;
+}
+
+.conteudo {
+    text-align: center;
+    margin: auto;
+    align-items: center;
+    align-content: center;
+}
+
+.nome {
+    margin: auto;
+    width: 400px;
+}
+
+.nome h3 {
+    padding-top: 25px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 40px;
+}
+
+.nome a {
+    text-decoration: none;
+}
+
+.icones i {
+    font-size: 25px;
+    color: white;
+    padding-left: 30px;
+}
+
+.linkMenu {
+    margin-top: 12px;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 5px 10px;
+    color: #2C81B2;
+}
+
+.linkMenu:hover {
+    margin-top: 12px;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    background-color: #2C81B2;
+    padding: 5px 10px;
+}
+
+.icones {
+    height: 75px;
+    width: 15%;
+    float: right;
+    margin-top: -40px;
+    margin-right: 15px;
+}
+
+.bola {
+    display: inline-block;
+}
+
+.containerBola{
+    margin-left: 100px;
+}
+
+.img {
+    border-radius: 100%;
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    margin-top: 30px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+.bola
+.img:hover {
+  background-color:#2C81B2;;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.InfoBola {
+    text-decoration: none;
+    color: grey;
+    text-align: center;
+    font-size: 17px;
+}
+
+.opcRoupa {
+    display: inline;
+}
+
+.descricao p {
+    text-decoration: none;
+    font-size: 10px;
+    color: black;
+    display: inline-block;
+}
+
+.opcRoupa img {
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    background-color: grey;
+    margin-left: 30px;
+}
+
+.tituloOfertas {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 39px 0 15px 0;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+
+/* ---------------------------- Login ------------------------------*/
+
+#bodyLogin {
+    background-color: #F2F2F2;
+}
+
+#fazerLogin {
+    margin: auto;
+    text-align: center;
+    background-color: white;
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
+.linkLogin {
+    padding: 60px;
+}
+
+.linkLogin a {
+    text-decoration: none;
+    color: #918f8f;
+}
+
+.linkLogin:hover a {
+    text-decoration: none;
+    color: #2C81B2;
+}
+
+h2 {
+    font-size: 30px;
+    padding-top: 52px;
+    padding-bottom: 20px;
+}
+
+.containerTitulo {
+    margin: 50px;
+}
+
+.campo {
+    height: 50px;
+    width: 300px;
+    font-size: 15px;
+    color: #003853;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid grey;
+    font-size: 18px;
+}
+
+.botao {
+    margin-top: 30px;
+    color: white;
+    background: green;
+    border: none;
+    padding: 12px 80px;
+    border-radius: 20px;
+}
+
+
+/* ---------------------------- Rodape ------------------------------*/
+
+.rodape {
+    height: 200px;
+    background-color: #F2F2F2;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 40px;
+}
+
+.imgRodape {
+    display: inline-block;
+}
+
+.Inforodape {
+    display: inline-block;
+    text-align: right;
+    margin-left: 150px;
+}
+
+img.logoRodape {
+    height: 140px;
+}
+
+.Inforodape p {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.LinksRodape {
+    display: inline-block;
+    text-align: left;
+    margin-right: 150px;
+}
+
+.iconRodape {
+    font-size: 32px;
+    padding-left: 29px;
+    color: #2C81B2;
+    padding-top: 10px;
+}
+
+.LinksRodape a {
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #000;
+}
+
+.LinksRodape:hover a li {
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #2C81B2;
+}
+
+.LinksRodape li {
+    margin: 14px 0;
+}
+
+
+/* ---------------------------- Quadradinhos ------------------------------*/
+
+.botaoMaisVendidos {
+    padding: 9px 28px;
+    border: none;
+    background-color: #3FA3DD;
+    border-radius: 5px;
+}
+
+.botaoMaisVendidos:hover {
+    background-color: #276488;
+    color: white;
+}
+
+.vitrine {
+    display: block;
+    max-width: 1300px;
+    text-align: center;
+    width: 100%;
+}
+
+.vitrine h2 {
+    font-size: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+.product-list {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1300px;
+    width: 100%;
+    @media (max-width: 991px) {
+        flex-wrap: wrap;
+    }
+}
+
+.product-item {
+    margin: 15px 5px;
+    max-width: 300px;
+    transition: .2s;
+    width: 100%;
+}
+
+.product-link {
+    color: #555;
+    text-decoration: none;
+}
+
+.product-info-img img {
+    max-width: 200px;
+}
+
+.title {
+    font-size: 19px;
+    padding: 0;
+}
+
+.price-box {
+    padding: 15px;
+}
+
+.price del {
+    color: rgb(180, 175, 175);
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.price ins {
+    color: #3FA3DD;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.price .price-info {
+    color: #3FA3DD;
+    display: block;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+
+/* ---------------------------- Produto ------------------------------*/
+
+.contProd {
+    margin: auto;
+    text-align: left;
+    margin-top: 100px;
+}
+
+.imgProduto {
+    text-align: center;
+    display: inline-block;
+    width: 50%;
+}
+
+.textoProduto {
+    text-align: left;
+    display: inline-flex;
+    float: right;
+    width: 50%;
+}
+
+.imagemProd {
+    margin: auto;
+    width: 40%;
+}
+
+.tamanho {
+    margin-top: 20px;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    border-radius: 100%;
+    margin-left: 14px;
+}
+
+.tamanho p {
+    padding: 15px;
+}
+
+.tamanho:hover {
+    margin-top: 20px;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border: 1px solid #3FA3DD;
+    background-color: #3FA3DD;
+}
+
+.infoSobre {
+    text-align: left;
+    margin-left: 178px;
+    color: #555;
+}
+
+.tituloSobre {
+    text-align: left;
+    margin-left: 178px;
+    font-weight: 300px;
+}
+
+.quantidade {
+    display: inline-block;
+}
+
+.textoProduto h4 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.textoProduto h3 {
+    margin-top: 25px;
+}
+
+.textoProduto h5 {
+    color: #918f8f;
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+.botaoComprar {
+    margin-top: 31px;
+    padding: 10px 148px;
+    font-size: 19px;
+    border: none;
+    background-color: #3FA3DD;
+}
+
+.botaoComprar:hover {
+    margin-top: 31px;
+    padding: 10px 148px;
+    font-size: 19px;
+    border: none;
+    background-color: #276488;
+    color: white;
+}
+
+#cep {
+    width: 267px;
+    margin-top: 20px;
+    height: 40px;
+    border: none;
+    background-color: rgb(228, 224, 220);
+}
+
+input.btnBuscar {
+    height: 40px;
+    border: none;
+    margin-left: -5px;
+    width: 99px;
+    background-color: #3FA3DD;
+    font-size: 15px;
+}
+
+.textoProduto i {
+    color: rgb(233, 233, 73);
+    margin-bottom: 5px;
+}
+
+
+/* ---------------------------- Banner ------------------------------*/
+
+.banner img {
+    clear: both;
+    width: 100%;
+    margin: 10px 0;
+}
+
+
+/* ---------------------------- Menu ------------------------------*/
+.menu-block a {
+    text-decoration: none;
+    color: #F2F2F2;
+    font-weight: 700;
+}
+
+.menu-:hover li a {
+    text-decoration: none;
+    color: #3FA3DD;
+}
+
+.menu-block li {
+    display: inline-block;
+    margin: 8px;
+}
+
+.menu-block {
+    background-color: #D49D6F;
+}
+
+.itenMenu:hover {
+    color: #FFEA94
+}
+
+/* ---------------------------- Produtos ------------------------------*/
+.linha{
+    margin: auto;
+    
+}
+
+
+.col1{
+    display: inline-block;
+    margin-left: 300px;
+    
+    
+}
+.col2{
+    display: inline-block;
+    margin-left: 200px;
+}
+
+.pageProdutos img{
+    max-width: 300px;
+}
+
+/* ---------------------------- Itens ------------------------------*/
+.infoCont{
+    display: inline-block;
+   height: 100px;
+   width: 33%;
+   
+    
+    
+}
+
+.info{
+    margin-top: 50px;;
+}
+
+.info i{
+    font-size: 90px;
+
+}
+.info p{
+    font-size: 20px;
+
+}
+/* ---------------------------- Carrinho ------------------------------*/
+        .topo{
+            height: 60px;
+            background: #0F0E5B;
+            
+        } 
+        #check{
+            display: none;
+        }
+        #icone{
+            cursor: pointer;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .barra{
+            background: #3FA3DD;
+            height: 100%;
+            width: 300px;
+            position: absolute;
+            transition: all .2s linear;
+           right:  -300px;
+           margin-top: 10px;
+        }
+
+        nav{
+            width: 100%;
+            position: absolute;
+            top: 60px;
+
+        }
+
+        nav a{
+            text-decoration: none;
+        }
+
+        .link{
+            background: #818094;
+            padding: 20px;
+            font-family: 'Arial';
+            font-size: 12pt;
+            transition: all .2 linear;
+            color: #FFF;
+            border-bottom: 2px solid #0F0E5B;
+
+        }
+
+        .link:hover{  
+            background: #5F5E6D;
+        }
+
+        #check:checked ~ .barra{
+            transform: translateX(-300px);
+        }
+
+        .barra h2 {
+    font-size: 26px;
+    padding-top: 41px;
+    padding-bottom: 20px;
+    text-align: center;
+
+
+}
+.barra button {
+    padding: 11px;
+    margin-left: 21px;
+    /* margin: auto; */
+    margin-top: 20px;
+    border:none;
+}
+       div#itens {
+    margin-left: 11px;
+    font-size: 18px;
+}
+.total {
+    font-weight: 900;
+    text-align: center;
+    font-size: 22px;
+    margin-top: 10px;
+}     
+/* ---------------------------- Contato ------------------------------*/
+ #containerContato {
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+    #tituloContato {
+        font-size: 15px;
+        font-family: "Arial", Times, Serif;
+    }
+    
+    #mensagemContato {
+        font-size: 18px;
+        font-family: "Arial", Times, Serif;
+    }
+       
+    .areaContato1 {
+        border: 1px solid #87CEFA;
+        background: #3FA3DD;
+        padding: 30px;
+    }
+
+    .areaContato2 {
+        padding-top: 4px;
+    }
+
+    .espacoContato{
+        width: 100%;
+    }
+
+    #email {
+        width: 1200px;
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+       
+        margin: 20px 0;
+    }
+    
+    #enviar {
+        color: white;
+        background: #D49D6F;
+        padding: 5px 60px;
+        border: none;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }

@@ -1,0 +1,375 @@
+<html>
+
+<head>
+    <title>Outlet Urban</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="CSS/estilo.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <script type="text/javascript" src="JS/javaScript.js"></script>
+    <script src="https://kit.fontawesome.com/d881c2b784.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <!-- ------------------------------------------------ Topo ------------------------------------------------------>
+    <div class="container">
+        <div class="topo">
+
+            <div class="login">
+                <div class="logoTopo"> </div>
+
+                <div class="nome">
+                    <a href="index.html">
+                        <h3>Outlet Urban</h3>
+                    </a>
+                </div>
+                <div class="icones">
+                    <a href="login.html">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+
+
+
+
+                    <input type="checkbox" id="check">
+                    <label id="icone" for="check"><i class="fa-solid fa-cart-shopping"></i></label>
+
+                    <div class="barra">
+
+                        <h2> Carrinho de Compras </h2>
+                        <div id="itens"> </div>
+                        <div class="total">Total: <span id="total"></span> </div>
+
+                        <script>
+                            var total = 0;
+                            var i = 0;
+                            var valor = 0;
+
+                            for (i = 1; i <= 99; i++) {
+                                var prod = localStorage.getItem("produto" + i + "");
+                                if (prod != null) {
+
+                                    document.getElementById("itens").innerHTML += localStorage.getItem("qtd" + i) + " x ";
+                                    document.getElementById("itens").innerHTML += localStorage.getItem("produto" + i);
+                                    document.getElementById("itens").innerHTML += " ";
+                                    document.getElementById("itens").innerHTML += "R$: " + localStorage.getItem("valor" + i) + "<hr>";
+                                     valor = parseFloat(localStorage.getItem("valor" + i)); // valor 
+                                    total = (total + valor);
+                                }
+                            }
+
+                            document.getElementById("total").innerHTML = total.toFixed(2); 
+                        </script>
+
+                        <button type="button" style="background-color: red"
+                            onclick=" localStorage.clear(); location.reload();"> Limpar carrinho </button>
+                        <button type="button" style="background-color: green"> Finalizar compra </button>
+                    </div>
+                </div>
+
+                </a>
+            </div>
+        </div>
+  <!-- ------------------------------------------------ Menu ------------------------------------------------------>
+        <nav style="display:block; margin: 0 auto; text-align: center; margin-top: 8px">
+
+
+            <div class="menu-block">
+                <ul class="">
+                    <li><a href="index.html" class="itenMenu">Home</a></li>
+                    <li><a href="camisa.html" class="itenMenu">Camisas</a></li>
+                    <li><a href="bermuda.html" class="itenMenu">Bermuda</a></li>
+                    <li><a href="calca.html" class="itenMenu">Calça</a></li>
+                    <li><a href="jaqueta.html" class="itenMenu">Jaqueta</a></li>
+                    <li><a href="regata.html" class="itenMenu">Regata</a></li>
+                    <li><a href="sapatos.html" class="itenMenu">Sapatos</a></li>
+                    <li><a href="sunga.html" class="itenMenu">Sunga</a></li>
+                    <li><a href="moletom.html" class="itenMenu">Moletom</a></li>
+                    <li><a href="jeans.html" class="itenMenu">Jeans</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </div>
+    <!-- ------------------------------------------------ Bolas ------------------------------------------------------>
+
+    <div style="display: block; margin: 0 auto; text-align: center; margin-top: 30px">
+        <div class="containerBola">
+
+            <a href="jaqueta.html">
+                <div class="bola">
+                    <img src="Imagens/jaqueta.jpg" class="img" alt="description image">
+                    <p class="InfoBola"> Jaqueta</p>
+                </div>
+            </a>
+            <a href="camisa.html">
+                <div class="bola">
+                    <img src="Imagens/camisa1.jpg" class="img" alt="description image">
+                    <p class="InfoBola"> Camisas</p>
+                </div>
+            </a>
+            <a href="sapato.html">
+                <div class="bola">
+                    <img src="Imagens/bermuda.jpg" class="img" alt="description image">
+                    <p class="InfoBola"> Bermuda</p>
+                </div>
+            </a>
+            <a href="sunga.html">
+                <div class="bola">
+                    <img src="Imagens/calca.jpg" class="img" alt="description image">
+                    <p class="InfoBola"> Calça</p>
+                </div>
+            </a>
+            <a href="moletom.html">
+                <div class="bola">
+                    <img src="Imagens/moletom.jpg" class="img" alt="description image">
+                    <p class="InfoBola">Moletom</p>
+                </div>
+            </a>
+
+            <a href="sapatos.html">
+                <div class="bola">
+                    <img src="Imagens/sapato.jpg" class="img" alt="description image">
+                    <p class="InfoBola">Sapato</p>
+                </div>
+            </a>
+        </div>
+      <!-- ------------------------------------------------ Quadrado ------------------------------------------------------>
+
+        
+
+        <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/af562a2a63.js" crossorigin="anonymous"></script>
+
+        <h2 class=""> Mais Vendidos</h2>
+
+        <ul class="product-list" type="none">
+            <li class="product-item">
+                <a href="Produtos/camisa1.html" target="blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img">
+                            <img id="imagem1" src="Imagens/camisa1.webp" alt="description image">
+                        </div>
+                        <figcaption class="product-info-description">
+                            <h2 class="title" id="nome1">Camisa Xadrez Azul</h2>
+
+
+                        </figcaption>
+                        <div class="price-box">
+                            <div class="price">
+                                <div>
+                                    <del>R$150,00</del>
+                                    <ins id="preco1">120,00</ins>
+                                </div>
+                                <span class="price-info">4x de R$ 30,00 </span>
+                            </div>
+                        </div>
+                    </figure>
+                </a>
+                <div>
+                    <input value="Adicionar ao carrinho" class="botaoMaisVendidos" type="button" id="adicionar1"
+                        id="produto1" onclick="AddCarrinho('Blusa-Xadrez-azul', 1, '120.00', 1)">
+
+
+                </div>
+            </li>
+
+            <li class="product-item">
+                <a href="" target="blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img">
+                            <img id="imagem2" src="Imagens/bermuda1.webp" alt="description image">
+                        </div>
+                        <figcaption class="product-info-description">
+                            <h2 class="title" id="nome2">Bermuda Basica Marrom</h2>
+
+
+                        </figcaption>
+                        <div class="price-box">
+                            <div class="price">
+                                <div>
+                                    <del>R$120,00</del>
+                                    <ins id="preco2">100.00</ins>
+                                </div>
+                                <span class="price-info">4x de R$ 25,00 </span>
+                            </div>
+                        </div>
+                    </figure>
+                </a>
+                <div>
+                    <input value="Adicionar ao carrinho" class="botaoMaisVendidos" type="button" id="adicionar1"
+                        id="produto1" onclick="AddCarrinho('Bermuda-Basica-Marrom', 1, '100.00', 3)">
+                </div>
+            </li>
+
+             <li class="product-item">
+                <a href="Produtos/camisa1.html" target="blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img">
+                            <img id="imagem1" src="Imagens/calca1.webp" alt="description image">
+                        </div>
+                        <figcaption class="product-info-description">
+                            <h2 class="title" id="nome1">Calsa Basica</h2>
+
+
+                        </figcaption>
+                        <div class="price-box">
+                            <div class="price">
+                                <div>
+                                    <del>R$130,00</del>
+                                    <ins id="preco1">90,00</ins>
+                                </div>
+                                <span class="price-info">4x de R$ 22,5 </span>
+                            </div>
+                        </div>
+                    </figure>
+                </a>
+                <div>
+                    <input value="Adicionar ao carrinho" class="botaoMaisVendidos" type="button" id="adicionar1"
+                        id="produto1" onclick="AddCarrinho('calca-basica', 1, '120.00', 4)">
+
+
+                </div>
+            </li>
+
+            <li class="product-item">
+                <a href="" target="blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img">
+                            <img id="imagem2" src="Imagens/tenis1.webp" alt="description image">
+                        </div>
+                        <figcaption class="product-info-description">
+                            <h2 class="title" id="nome2">Tenis Detalhe Branco</h2>
+
+
+                        </figcaption>
+                        <div class="price-box">
+                            <div class="price">
+                                <div>
+                                    <del>R$250,00</del>
+                                    <ins id="preco2">200.00</ins>
+                                </div>
+                                <span class="price-info">4x de R$ 50,00 </span>
+                            </div>
+                        </div>
+                    </figure>
+                </a>
+                <div>
+                    <input value="Adicionar ao carrinho" class="botaoMaisVendidos" type="button" id="adicionar1"
+                        id="produto1" onclick="AddCarrinho('tenis-detalhe-branco', 1, '100.00', 2)">
+                </div>
+            </li>
+   
+        </ul>
+
+        <!-- ------------------------------------------------Banner------------------------------------------------------>
+        <div class="banner">
+            <img src="Imagens/banner1.png" alt="description image">
+
+        </div>
+        <!-- ------------------------------------------------ Info ------------------------------------------------------>
+        <div class="info">
+            <div class="infoCont"> <i class="fa-solid fa-percent"></i>
+                <p> Frete grátis para compras acima de R$250,00 </p>
+            </div>
+            <div class="infoCont"><i class="fa-solid fa-truck"></i>
+                <p> Entrega para todo para todo Brasil</p>
+            </div>
+            <div class="infoCont"><i class="fa-solid fa-arrow-rotate-right"></i>
+                <p> Trocas e devoluçãoes</p>
+            </div>
+
+        </div>
+        <!-- ------------------------------------------------Contato------------------------------------------------------>
+        <div id="containerContato">
+
+            <div class="areaContato1">
+
+                <div id="tituloContato">
+                    <h1>Quer ficar por dentro das nossas novidades?</h1>
+                </div>
+
+                <div class="area2Contato">
+                    <p id="mensagem">Se inscreva em nossa newsletter!</p>
+
+                    <form>
+                        <div class="espacoContato">
+                            <input id="email" type="text" name="email" placeholder="E-mail">
+                        </div>
+
+                        <input id="enviar" type="submit" value="ENVIAR" onclick="validar();">
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="mapa">
+
+            <h2> Nossa loja física</h2><i class="fa-solid fa-location-dot"></i>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3738.0679534061437!2d-45.434894186031464!3d-20.462401986307924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b4ee0a9ccea33f%3A0x66066b8a271c1e49!2sR.%20Dr.%20Carlos%20Chagas%2C%2071%20-%20Formiga%2C%20MG%2C%2035570-000!5e0!3m2!1spt-BR!2sbr!4v1656033512001!5m2!1spt-BR!2sbr"
+                width="1200" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+
+
+
+        <!-- ------------------------------------------------Rodape------------------------------------------------------>
+
+        <div class="rodape">
+
+            <div class="LinksRodape">
+                <ul type="none">
+                    <li> <a href="quemsomos.html"> Quem somos </a></li>
+                        <li> <a href="atendimento.html"> Atendimento </a></li>
+                        <li> <a href="troca.html"> Troque o Produto </a></li>
+                        <li> <a href="nossosprodutos.html"> Nossos Produtos </a></li>
+                        <li> <a href="pagamento.html"> Metodos De pagamento</a></li>
+                        <li> <a href="contato.html"> Contato </a></li>
+
+
+                </ul>
+
+            </div>
+
+
+            <div class="imgRodape">
+                <p class="gray-dark">Executado por</p> <br>
+
+                <img src="Imagens/logo22.png" class="logoRodape">
+            </div>
+
+
+
+            <div class="Inforodape">
+
+                    <p> Outlet Urban </p>
+                    <p> Rua Amazonas, 298A, Formiga-Mg </p>
+                    <p> 3799842-7239</p>
+                    <p> outletUrban@gmail.com</p>
+
+                <a href="" target="_blank">
+                    <i class="fa-brands fa-facebook-square iconRodape"></i>
+                </a>
+                <a href="" target="_blank">
+                    <i class="fa-brands fa-instagram iconRodape"></i>
+                </a>
+                <a href="" target="_blank">
+                    <i class="fa-brands fa-whatsapp iconRodape"></i>
+                </a>
+                <a href="" target="_blank">
+                    <i class="fa-solid fa-envelope iconRodape"></i>
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
