@@ -1,7 +1,7 @@
 # Site de Roupas - Outlet Urban
 <p>Projeto desenvolvido para apresentação de um trabalho da disciplina de Desenvolvimento Web</p>
 
-## Tecnologia e materiais utilizados
+## Tecnologias utilizadas
 + HTML 5
 + CSS 3
 + JavaScript
